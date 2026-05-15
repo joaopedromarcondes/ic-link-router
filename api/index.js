@@ -7,9 +7,10 @@ export default function handler(req, res) {
         "https://facebook.com.br"
     ];
 
-  // Faz o sorteio de um número aleatório
-  const sorteio = Math.floor(Math.random() * links.length);
+    // Faz o sorteio de um número aleatório
+    const sorteio = Math.floor(Math.random() * links.length);
 
-  // Redireciona imediatamente no servidor (302 é o código de redirecionamento temporário)
-  res.redirect(302, links[sorteio]);
+    // Jeito nativo do Node.js para redirecionar (não depende da Vercel)
+    res.writeHead(302, { Location: links[sorteio] });
+    res.end();
 }
