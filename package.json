@@ -1,3 +1,6 @@
 {
-    "main": "api/index.js"
+    "main": "api/index.js",
+    "dependencies": {
+        "@vercel/analytics": "^2.0.1"
+    }
 }
