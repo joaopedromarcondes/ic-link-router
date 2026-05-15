@@ -1,6 +1,3 @@
-import { inject } from "@vercel/analytics"
-
-inject()
 
 export default function handler(req, res) {
 
